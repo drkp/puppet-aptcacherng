@@ -36,7 +36,7 @@ Simply declaring the `aptcacherng` class for a node, will apply the class using 
 
 *All* `apt-cacher-ng` config file directives are available as parameters to the `aptcacherng` class.  For example, to change the directory where `apt-cacher-ng` will store its cache:
 
-    class {'apt':
+    class {'aptcacherng':
         cachedir => '/data/apt/apt-cacher-ng'
     }
 
