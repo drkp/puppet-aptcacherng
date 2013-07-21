@@ -22,7 +22,11 @@ Use of `aptcacherng` causes installation of the `apt-cacher-ng` package, generat
 
 ### Beginning with aptcacherng
 
-This module is very straightforward to use.
+Quickest way to get an apt caching proxy using defaults:
+
+    class {'aptcacherng':}
+
+This will apply all resources and leave you with `apt-cacher-ng` running on port `3142`.
 
 ## Usage
 
@@ -63,4 +67,4 @@ Only debian based distributions are currently supported.
 
 ## Development
 
-Development takes place in the [markhellewell-aptcacherng](https://github.com/markhellewell/markhellewell-aptcacherng) GitHub repository.  Pull Requests happily accepted.
+Development takes place in the [puppet-aptcacherng](https://github.com/markhellewell/markhellewell-aptcacherng) GitHub repository.  Pull Requests happily accepted.
