@@ -67,4 +67,4 @@ Only debian based distributions are currently supported.
 
 ## Development
 
-Development takes place in the [puppet-aptcacherng](https://github.com/markhellewell/markhellewell-aptcacherng) GitHub repository.  Pull Requests happily accepted.
+Development takes place in the [puppet-aptcacherng](https://github.com/markhellewell/puppet-aptcacherng) GitHub repository.  Pull Requests happily accepted.
