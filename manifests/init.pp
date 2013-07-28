@@ -89,6 +89,25 @@ class aptcacherng (
     name   => $package,
   }
 
+  File {
+    require => Package['apt-cacher-ng'],
+    before  => Service['apt-cacher-ng'],
+  }
+
+  file {$cachedir:
+    ensure  => directory,
+    owner   => apt-cacher-ng,
+    group   => apt-cacher-ng,
+    mode    => '2755',
+  }
+
+  file {$logdir:
+    ensure  => directory,
+    owner   => apt-cacher-ng,
+    group   => apt-cacher-ng,
+    mode    => '2755',
+  }
+
   file {'/etc/apt-cacher-ng/acng.conf':
     content => template('aptcacherng/acng.conf.erb'),
     owner   => 'root',
