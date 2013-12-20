@@ -96,15 +96,15 @@ class aptcacherng (
 
   file {$cachedir:
     ensure  => directory,
-    owner   => apt-cacher-ng,
-    group   => apt-cacher-ng,
+    owner   => 'apt-cacher-ng',
+    group   => 'apt-cacher-ng',
     mode    => '2755',
   }
 
   file {$logdir:
     ensure  => directory,
-    owner   => apt-cacher-ng,
-    group   => apt-cacher-ng,
+    owner   => 'apt-cacher-ng',
+    group   => 'apt-cacher-ng',
     mode    => '2755',
   }
 
