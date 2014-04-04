@@ -1,0 +1,29 @@
+{
+  "types": [
+
+  ],
+  "checksums": {
+    "Modulefile": "e13abd12b28cd37aa6fbecda7f6cb0b4",
+    "CONTRIBUTORS.md": "16645295d5d7a3be75a1ac62bddaeecf",
+    "tests/params.pp": "d41d8cd98f00b204e9800998ecf8427e",
+    "tests/init.pp": "7a2b168badb8075c4d7970eac44d33f2",
+    "manifests/init.pp": "8736d64a0870962628eab74a283a4044",
+    "templates/security.conf.erb": "037770d319bfd1cd8e46967afbfca3f5",
+    "Changelog": "4a0f01047350bdd52d02de99310b5f33",
+    "templates/acng.conf.erb": "1545df2cf793808ab67d20d61d9d47db",
+    "README.md": "f4683e8a950ff9a774656bc1ac5880c3",
+    "manifests/params.pp": "ddde1a1ead25a6538aec0242d33711de",
+    "LICENSE": "3528aa13fb7106a7fcf7b983eb5f30be"
+  },
+  "project_page": "https://github.com/markhellewell/puppet-aptcacherng",
+  "description": "The aptcacherng module permits management of\n    an apt-cacher-ng caching proxy service.",
+  "summary": "Install and configure an apt-cacher-ng server.",
+  "source": "git@github.com:markhellewell/puppet-aptcacherng.git",
+  "dependencies": [
+
+  ],
+  "author": "markhellewell",
+  "version": "0.1.5",
+  "name": "markhellewell-aptcacherng",
+  "license": "BSD-2-Clause"
+}
