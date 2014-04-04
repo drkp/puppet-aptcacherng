@@ -71,6 +71,8 @@ class aptcacherng (
   $allowuserports = undef,
   $redirmax = undef,
   $vfileuserangeops = undef,
+  $auth_username = undef,
+  $auth_password = undef,
   # TODO support an argument for this
   # http://www.unix-ag.uni-kl.de/~bloch/acng/html/howtos.html#howto-importdisk
   ) {
@@ -121,4 +123,14 @@ class aptcacherng (
     enable    => true,
     subscribe => File['/etc/apt-cacher-ng/acng.conf'],
   }
+
+  if $auth_username {
+    file {'/etc/apt-cacher-ng/security.conf':
+      content => template('aptcacherng/security.conf.erb'),
+      owner   => 'apt-cacher-ng',
+      group   => 'apt-cacher-ng',
+      mode    => '0600',
+    }
+  }
+
 }
