@@ -11,6 +11,9 @@ LogDir: <%= @logdir %>
 # place to look for additional configuration and resource files if they are not
 # found in the configuration directory
 # SupportDir: /usr/lib/apt-cacher-ng
+<% if @supportdir %>
+SupportDir: <%= @supportdir %>
+<% end %>
 
 # TCP (http) port
 # Set to 9999 to emulate apt-proxy
