@@ -1,0 +1,10 @@
+- pkg/
+- spec/
+- Rakefile
+- .git/
+- .forgeignore
+- .travis.yml
+- .gitignore
+- Gemfile
+- Gemfile.lock
+- .fixtures.yml
