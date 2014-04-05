@@ -187,7 +187,7 @@ PfilePattern: <%= @pfilepattern %>
 # exists or might be unknown.
 # WfilePattern = (^|.*?/)(Release|InRelease|Release\.gpg|(Packages|Sources)(\.gz|\.bz2|\.lzma|\.xz)?|Translation[^/]*(\.gz|\.bz2|\.lzma|\.xz)?|MD5SUMS|SHA1SUMS|.*\.xml|.*\.db\.tar\.gz|.*\.files\.tar\.gz|.*\.abs\.tar\.gz|[a-z]+32.exe)$|/dists/.*/installer-.*/images/.*
 <% if @wfilepattern %>
-wfilePattern: <%= @wfilepattern %>
+WfilePattern: <%= @wfilepattern %>
 <% end %>
 
 # Higher modes only working with the debug version
