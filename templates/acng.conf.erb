@@ -322,6 +322,9 @@ PrecacheFor: <%= @precachefor %>
 # be a well formated HTTP headers part including newlines (DOS style) which
 # can be entered as escape sequences (\r\n).
 # RequestAppendix: X-Tracking-Choice: do-not-track\r\n
+<% if @requestappendix %>
+RequestAppendix: <%= @requestappendix %>
+<% end %>
 
 # Specifies the IP protocol families to use for remote connections. Order does
 # matter, first specified are considered first. Possible combinations:
