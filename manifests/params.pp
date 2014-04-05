@@ -6,7 +6,7 @@ class aptcacherng::params {
       $package = 'apt-cacher-ng'
     }
     default: {
-      fail ("aptcacherng: ${::operatingsystem} not supported.")
+      fail ("aptcacherng: ${::osfamily} not supported.")
     }
   }
 }
