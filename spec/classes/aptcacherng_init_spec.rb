@@ -35,7 +35,7 @@ describe 'aptcacherng', :type => :class do
         :owner   => 'root',
         :group   => 'root',
         :mode    => '0644',
-        :require => 'Package[apt-cacher-ng]',
+        :require => 'Package[apt-cacher-ng]'
       )}
 
       it { should contain_file('/etc/apt-cacher-ng/acng.conf').with_content(/^CacheDir: \/var\/cache\/apt-cacher-ng$/) }
