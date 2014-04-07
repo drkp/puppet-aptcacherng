@@ -1,1 +1,5 @@
 pkg
+*.swp
+.rvmrc
+Gemfile.lock
+spec/fixtures/modules/
