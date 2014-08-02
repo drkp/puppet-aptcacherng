@@ -19,6 +19,8 @@ describe 'aptcacherng', :type => :class do
     it { should contain_package('apt-cacher-ng') }
     it { should contain_service('apt-cacher-ng') }
 
+    it { should contain_file('/etc/apt-cacher-ng/zz_debconf.conf').with_ensure('absent')}
+
     describe 'With default params' do
       ['/var/cache/apt-cacher-ng','/var/log/apt-cacher-ng'].each do |d|
         it { should contain_file(d).with(
