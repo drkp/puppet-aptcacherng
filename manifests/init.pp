@@ -394,10 +394,15 @@ class aptcacherng (
     require => Package['apt-cacher-ng'],
   }
 
+  file {'/etc/apt-cacher-ng/zz_debconf.conf':
+    ensure => absent,
+  }
+
   service {'apt-cacher-ng':
     ensure    => $service_ensure,
     enable    => $service_enable,
-    subscribe => File['/etc/apt-cacher-ng/acng.conf'],
+    subscribe => [File['/etc/apt-cacher-ng/acng.conf'],
+                  File['/etc/apt-cacher-ng/zz_debconf.conf']],
   }
 
   if $auth_username {
