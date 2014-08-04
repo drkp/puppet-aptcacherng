@@ -347,6 +347,8 @@ class aptcacherng (
   $vfileuserangeops     = undef,
   $auth_username        = undef,
   $auth_password        = undef,
+  $service_ensure       = running,
+  $service_enable       = true,
   # TODO support an argument for this
   # http://www.unix-ag.uni-kl.de/~bloch/acng/html/howtos.html#howto-importdisk
   ) {
@@ -393,8 +395,8 @@ class aptcacherng (
   }
 
   service {'apt-cacher-ng':
-    ensure    => running,
-    enable    => true,
+    ensure    => $service_ensure,
+    enable    => $service_enable,
     subscribe => File['/etc/apt-cacher-ng/acng.conf'],
   }
 
