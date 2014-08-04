@@ -1,5 +1,14 @@
+0.1.7
+=====
+
+Features:
+- Service parameters
+- Tests for puppet 3.6
+- Workaround for bug in newer apt-cacher-ng package
+
 0.1.6
 =====
+
 Features:
 - Tests and puppet documentation
 

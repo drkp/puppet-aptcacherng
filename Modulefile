@@ -1,5 +1,5 @@
 name 'markhellewell-aptcacherng'
-version '0.1.6'
+version '0.1.7'
 summary 'Install and configure an apt-cacher-ng server.'
 description "The aptcacherng module permits management of
     an apt-cacher-ng caching proxy service."
