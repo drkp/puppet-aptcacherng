@@ -6,7 +6,7 @@
   "license": "BSD-2-Clause",
   "source": "git@github.com:markhellewell/puppet-aptcacherng.git",
   "project_page": "https://github.com/markhellewell/puppet-aptcacherng",
-  "issues_url": null,
+  "issues_url": "https://github.com/markhellewell/puppet-aptcacherng/issues",
   "description": "The aptcacherng module permits management of\n    an apt-cacher-ng caching proxy service.",
   "dependencies": [
   
