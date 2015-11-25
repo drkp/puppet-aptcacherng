@@ -1,6 +1,6 @@
 {
   "name": "markhellewell-aptcacherng",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "author": "markhellewell",
   "summary": "Install and configure an apt-cacher-ng server.",
   "license": "BSD-2-Clause",
@@ -17,7 +17,14 @@
       "12.04",
       "10.04"
       ]
+    },
+    "operatingsystem": "Debian",
+    "operatingsystemrelease": [
+      "8",
+      "7",
+      "6"
+      ]
     }
   ],
-  "tags": ["apt", "packaging", "cache"]
+  "tags": ["apt", "packaging", "cache", "apt-cacher-ng"]
 }
