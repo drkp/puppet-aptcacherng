@@ -18,12 +18,12 @@ env:
 matrix:
   exclude:
     - rvm: 1.9.3
-      env:
-        - PUPPET_GEM_VERSION="~> 2.7.0"
-        - PUPPET_GEM_VERSION="~> 3.3.2"
+      env: PUPPET_GEM_VERSION="~> 2.7.0"
+    - rvm: 1.9.3
+      env: PUPPET_GEM_VERSION="~> 3.3.2"
     - rvm: 2.0.0
-      env:
-        - PUPPET_GEM_VERSION="~> 2.7.0"
-        - PUPPET_GEM_VERSION="~> 3.3.2"
+      env: PUPPET_GEM_VERSION="~> 2.7.0"
+    - rvm: 2.0.0
+      env: PUPPET_GEM_VERSION="~> 3.3.2"
 notifications:
   email: true
