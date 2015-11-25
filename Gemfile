@@ -6,6 +6,7 @@ else
   puppetversion = ['>= 3.0']
 end
 
+gem 'rspec-support', '3.0.3'
 gem 'rspec-core', '3.0.3'
 gem 'rake', '10.1.0'
 gem 'puppet-lint', '~> 0.3.2'
