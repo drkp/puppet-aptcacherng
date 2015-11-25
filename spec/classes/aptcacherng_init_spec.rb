@@ -3,14 +3,14 @@ require 'spec_helper'
 # aptcacherng
 describe 'aptcacherng', :type => :class do
 
-  #describe 'On an unknown osfamily' do
-    #let(:facts) {{ :osfamily => 'Fooboozoo' }}
-    #it 'should fail' do
-      #expect do
-        #subject
-      #end.to raise_error(Puppet::Error, /aptcacherng: Fooboozoo not supported./)
-    #end
-  #end
+  describe 'On an unknown osfamily' do
+    let(:facts) {{ :osfamily => 'Fooboozoo' }}
+    it 'should fail' do
+      expect do
+        subject
+      end.to raise_error(Puppet::Error, /aptcacherng: Fooboozoo not supported./)
+    end
+  end
 
   describe 'On Debian' do
     let(:facts) {{ :osfamily => 'Debian' }}
