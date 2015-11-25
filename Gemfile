@@ -11,4 +11,4 @@ gem 'puppet-lint', '~> 0.3.2'
 gem 'rspec-puppet'
 gem 'puppet-syntax'
 gem 'puppet', puppetversion
-gem 'puppetlabs_spec_helper'
+gem 'puppetlabs_spec_helper', '~> 1.0.1'
