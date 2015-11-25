@@ -284,11 +284,11 @@
 #   Default: undef
 #
 # [*passthroughpattern*]
-#   Allow data pass-through mode for certain hosts when requested by the client
-#   using a CONNECT request. This is particularly useful to allow access to SSL
-#   sites (https proxying). The string is a regular expression which should cover
-#   the server name with port and must be correctly formated and terminated.
-#   Default: undef
+#   Allow data pass-through mode for certain hosts when requested by
+#   the client using a CONNECT request. This is particularly useful to
+#   allow access to SSL sites (https proxying). The string is a
+#   regular expression which should cover the server name with port
+#   and must be correctly formated and terminated.  Default: undef
 #
 # === Examples
 #
