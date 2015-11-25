@@ -81,6 +81,7 @@ describe 'aptcacherng', :type => :class do
           :vfilepattern         => 'foo',
           :pfilepattern         => 'boo',
           :wfilepattern         => 'zoo',
+          :passthroughpattern   => 'baz',
           :debug                => '3',
           :exposeorigin         => '1',
           :logsubmittedorigin   => '1',
@@ -134,6 +135,7 @@ describe 'aptcacherng', :type => :class do
       it { should contain_file('/etc/apt-cacher-ng/acng.conf').with_content(/^VfilePattern: #{params_set[:vfilepattern]}$/)}
       it { should contain_file('/etc/apt-cacher-ng/acng.conf').with_content(/^PfilePattern: #{params_set[:pfilepattern]}$/)}
       it { should contain_file('/etc/apt-cacher-ng/acng.conf').with_content(/^WfilePattern: #{params_set[:wfilepattern]}$/)}
+      it { should contain_file('/etc/apt-cacher-ng/acng.conf').with_content(/^PassThroughPattern: #{params_set[:passthroughpattern]}$/)}
       it { should contain_file('/etc/apt-cacher-ng/acng.conf').with_content(/^Debug: #{params_set[:debug]}$/)}
       it { should contain_file('/etc/apt-cacher-ng/acng.conf').with_content(/^ExposeOrigin: #{params_set[:exposeorigin]}$/)}
       it { should contain_file('/etc/apt-cacher-ng/acng.conf').with_content(/^LogSubmittedOrigin: #{params_set[:logsubmittedorigin]}$/)}
