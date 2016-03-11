@@ -290,6 +290,10 @@
 #   regular expression which should cover the server name with port
 #   and must be correctly formated and terminated.  Default: undef
 #
+# [*max_files*]
+#   Sets Linux security nofile limit
+#   Default: 1024
+#
 # === Examples
 #
 #  class { aptcacherng:
@@ -357,6 +361,7 @@ class aptcacherng (
   $auth_password        = undef,
   $service_ensure       = running,
   $service_enable       = true,
+  $max_files            = 1024,
   # TODO support an argument for this
   # http://www.unix-ag.uni-kl.de/~bloch/acng/html/howtos.html#howto-importdisk
   ) {
@@ -404,6 +409,14 @@ class aptcacherng (
 
   file {'/etc/apt-cacher-ng/zz_debconf.conf':
     ensure => absent,
+  }
+
+  file {'/etc/security/limits.d/apt-cacher-ng':
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    content => "apt-cacher-ng soft nofile ${max_files}\napt-cacher-ng hard nofile ${max_files}",
   }
 
   service {'apt-cacher-ng':
