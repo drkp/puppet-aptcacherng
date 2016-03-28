@@ -292,7 +292,7 @@
 #
 # [*max_files*]
 #   Sets Linux security nofile limit
-#   Default: 1024
+#   Default: undef
 #
 # === Examples
 #
@@ -361,7 +361,7 @@ class aptcacherng (
   $auth_password        = undef,
   $service_ensure       = running,
   $service_enable       = true,
-  $max_files            = 1024,
+  $max_files            = undef,
   # TODO support an argument for this
   # http://www.unix-ag.uni-kl.de/~bloch/acng/html/howtos.html#howto-importdisk
   ) {
@@ -411,12 +411,18 @@ class aptcacherng (
     ensure => absent,
   }
 
-  file {'/etc/security/limits.d/apt-cacher-ng':
-    ensure  => file,
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    content => "apt-cacher-ng soft nofile ${max_files}\napt-cacher-ng hard nofile ${max_files}",
+  if $max_files != undef {
+    file {'/etc/security/limits.d/apt-cacher-ng':
+      ensure  => file,
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0644',
+      content => "apt-cacher-ng soft nofile ${max_files}\napt-cacher-ng hard nofile ${max_files}",
+    }
+  } else {
+    file {'/etc/security/limits.d/apt-cacher-ng':
+      ensure => absent
+    }
   }
 
   service {'apt-cacher-ng':
