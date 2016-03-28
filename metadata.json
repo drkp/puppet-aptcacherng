@@ -1,6 +1,6 @@
 {
   "name": "markhellewell-aptcacherng",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "markhellewell",
   "summary": "Install and configure an apt-cacher-ng server.",
   "license": "BSD-2-Clause",
