@@ -413,11 +413,10 @@ class aptcacherng (
 
   if $max_files != undef {
     file {'/etc/security/limits.d/apt-cacher-ng':
-      ensure  => file,
+      content => template('aptcacherng/apt-cacher-ng_limits.erb'),
       owner   => 'root',
       group   => 'root',
       mode    => '0644',
-      content => "apt-cacher-ng soft nofile ${max_files}\napt-cacher-ng hard nofile ${max_files}",  # noqa
     }
   } else {
     file {'/etc/security/limits.d/apt-cacher-ng':
