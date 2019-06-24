@@ -178,9 +178,15 @@ MaxConThreads: <%= @maxconthreads %>
 <% if @vfilepattern %>
 VfilePattern: <%= @vfilepattern %>
 <% end %>
+<% if @vfilepatternex %>
+VfilePatternEx: <%= @vfilepatternex %>
+<% end %>
 # PfilePattern = .*(\.d?deb|\.rpm|\.dsc|\.tar(\.gz|\.bz2|\.lzma|\.xz)(\.gpg)?|\.diff(\.gz|\.bz2|\.lzma|\.xz)|\.jigdo|\.template|changelog|copyright|\.udeb|\.debdelta|\.diff/.*\.gz|(Devel)?ReleaseAnnouncement(\?.*)?|[a-f0-9]+-(susedata|updateinfo|primary|deltainfo).xml.gz|fonts/(final/)?[a-z]+32.exe(\?download.*)?|/dists/.*/installer-[^/]+/[0-9][^/]+/images/.*)$
 <% if @pfilepattern %>
 PfilePattern: <%= @pfilepattern %>
+<% end %>
+<% if @pfilepatternex %>
+PfilePatternEx: <%= @pfilepatternex %>
 <% end %>
 # Whitelist for expiration, file types not to be removed even when being
 # unreferenced. Default: many parts from VfilePattern where no parent index
@@ -188,6 +194,9 @@ PfilePattern: <%= @pfilepattern %>
 # WfilePattern = (^|.*?/)(Release|InRelease|Release\.gpg|(Packages|Sources)(\.gz|\.bz2|\.lzma|\.xz)?|Translation[^/]*(\.gz|\.bz2|\.lzma|\.xz)?|MD5SUMS|SHA1SUMS|.*\.xml|.*\.db\.tar\.gz|.*\.files\.tar\.gz|.*\.abs\.tar\.gz|[a-z]+32.exe)$|/dists/.*/installer-.*/images/.*
 <% if @wfilepattern %>
 WfilePattern: <%= @wfilepattern %>
+<% end %>
+<% if @wfilepatternex %>
+WfilePatternEx: <%= @wfilepatternex %>
 <% end %>
 
 # Higher modes only working with the debug version
