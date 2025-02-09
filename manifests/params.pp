@@ -11,7 +11,7 @@
 # Copyright 2013 Mark Hellewell.
 #
 class aptcacherng::params {
-  case $::osfamily {
+  case $facts['os']['family'] {
     # covers debian and ubuntu, which is all we support
     'debian' : {
       $package = 'apt-cacher-ng'
